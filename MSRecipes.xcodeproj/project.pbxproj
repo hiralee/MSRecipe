@@ -31,6 +31,8 @@
 		FB29323B236C672E004AF58E /* RecipeListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29323A236C672E004AF58E /* RecipeListPresenterTest.swift */; };
 		FB29323D236C6CD2004AF58E /* RecipeListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29323C236C6CD2004AF58E /* RecipeListInteractorTest.swift */; };
 		FB29323F236C8C3F004AF58E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FB29323E236C8C3F004AF58E /* README.md */; };
+		FB293243236C8FF1004AF58E /* dependency_diagram.png in Resources */ = {isa = PBXBuildFile; fileRef = FB293242236C8FF1004AF58E /* dependency_diagram.png */; };
+		FB293245236C9004004AF58E /* VIP design pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = FB293244236C9004004AF58E /* VIP design pattern.png */; };
 		FBA0448A23699A5E00C7AA0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA0448923699A5E00C7AA0B /* AppDelegate.swift */; };
 		FBA0449123699A5F00C7AA0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA0449023699A5F00C7AA0B /* Assets.xcassets */; };
 		FBA0449423699A5F00C7AA0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA0449223699A5F00C7AA0B /* LaunchScreen.storyboard */; };
@@ -79,6 +81,8 @@
 		FB29323A236C672E004AF58E /* RecipeListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenterTest.swift; sourceTree = "<group>"; };
 		FB29323C236C6CD2004AF58E /* RecipeListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListInteractorTest.swift; sourceTree = "<group>"; };
 		FB29323E236C8C3F004AF58E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FB293242236C8FF1004AF58E /* dependency_diagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dependency_diagram.png; sourceTree = "<group>"; };
+		FB293244236C9004004AF58E /* VIP design pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VIP design pattern.png"; sourceTree = "<group>"; };
 		FBA0448623699A5E00C7AA0B /* MSRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA0448923699A5E00C7AA0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBA0449023699A5F00C7AA0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +205,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		FB293246236C909A004AF58E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB293242236C8FF1004AF58E /* dependency_diagram.png */,
+				FB293244236C9004004AF58E /* VIP design pattern.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FBA0447D23699A5D00C7AA0B = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +245,7 @@
 				FB293203236AF094004AF58E /* RecipeList */,
 				FB293222236B8C47004AF58E /* DetailView */,
 				FB293218236B2680004AF58E /* Helpers */,
+				FB293246236C909A004AF58E /* Resources */,
 				FBA0449023699A5F00C7AA0B /* Assets.xcassets */,
 				FBA0449223699A5F00C7AA0B /* LaunchScreen.storyboard */,
 				FBA0449523699A5F00C7AA0B /* Info.plist */,
@@ -339,8 +353,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB29323F236C8C3F004AF58E /* README.md in Resources */,
+				FB293245236C9004004AF58E /* VIP design pattern.png in Resources */,
 				FBA0449423699A5F00C7AA0B /* LaunchScreen.storyboard in Resources */,
 				FBA0449123699A5F00C7AA0B /* Assets.xcassets in Resources */,
+				FB293243236C8FF1004AF58E /* dependency_diagram.png in Resources */,
 				FB293226236B8C8D004AF58E /* DetailViewController.xib in Resources */,
 				FB29320F236B1A4A004AF58E /* RecipeListViewController.xib in Resources */,
 				FB293213236B22B3004AF58E /* RecipeCell.xib in Resources */,
