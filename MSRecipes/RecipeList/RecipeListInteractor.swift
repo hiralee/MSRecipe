@@ -1,7 +1,16 @@
 import UIKit
 import Contentful
 
-class RecipeListInteractor {
+protocol RecipeListInteractable {
+    var recipes: [Recipe] { get }
+    var recipeAssests: [String: UIImage] { get }
+    
+    func fetchRecipes(with imageSize: ImageSize)
+    func fetchAsset(asset: Asset?, size: ImageSize)
+}
+
+class RecipeListInteractor: RecipeListInteractable {
+    
     var recipes: [Recipe] = []
     var recipeAssests: [String: UIImage] = [:]
     
@@ -29,7 +38,7 @@ class RecipeListInteractor {
         }
     }
     
-    func fetchAsset(asset: Asset?, size: ImageSize, index: Int) {
+    func fetchAsset(asset: Asset?, size: ImageSize) {
         ImageDownloadManager.shared.downloadImage(asset, size: size) { [weak self] (image, asset, error) in
             if let image = image, let asset = asset {
                 // use shared exclusion lock on asset dictionary to allow only one thread to write
@@ -42,12 +51,9 @@ class RecipeListInteractor {
     }
     
     private func fetchImages(with imageSize: ImageSize) {
-        var index = 0
-        
         for recipe in recipes {
             dispatchGroup.enter()
-            fetchAsset(asset: recipe.photo, size: imageSize, index: index)
-            index += 1
+            fetchAsset(asset: recipe.photo, size: imageSize)
         }
         
         dispatchGroup.notify(queue: DispatchQueue.main) {

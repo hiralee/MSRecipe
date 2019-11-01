@@ -13,7 +13,7 @@ protocol RecipeListViewProtocol: class {
 }
 
 class RecipeListViewController: UIViewController, RecipeListViewProtocol, UITableViewDelegate, UITableViewDataSource {
-    private var interactor: RecipeListInteractor?
+    private var interactor: RecipeListInteractable?
     
     private let reuseIdentifier = "RecipeCell"
     private let recipeImageWidth: UInt = UInt(UIScreen.main.bounds.size.width)
@@ -21,7 +21,7 @@ class RecipeListViewController: UIViewController, RecipeListViewProtocol, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
-    convenience init(interactor: RecipeListInteractor) {
+    convenience init(interactor: RecipeListInteractable) {
         self.init()
         self.interactor = interactor
     }
