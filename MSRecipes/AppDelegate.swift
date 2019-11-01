@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  MSRecipes
-//
-//  Created by hiralee malaviya on 30.10.19.
-//  Copyright © 2019 hiralee malaviya. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -13,9 +5,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let viewController = Flow().initiateFlow()
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.navigationBar.barTintColor = .black
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController.navigationBar.titleTextAttributes = textAttributes
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.tintColor = .white
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
