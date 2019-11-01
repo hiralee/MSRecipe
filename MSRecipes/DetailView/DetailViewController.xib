@@ -62,6 +62,9 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="DtM-Af-rO1" firstAttribute="width" secondItem="WsK-PY-cNa" secondAttribute="width" id="RCI-dR-4gQ"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                     <constraints>
